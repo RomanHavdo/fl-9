@@ -1,0 +1,158 @@
+@media print {
+    @page {
+        margin-top: 1.5cm;
+
+    }
+    .tm-main-content {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #about,
+    nav {
+        display: none;
+    }
+
+    section:not(:first-of-type) {
+        display: none;
+    }
+
+    .tm-banner {
+        height: 190px;
+        padding: unset;
+    }
+
+    .pad {
+        padding: 0 0 0 1.25em;
+    }
+
+    h2.tm-section-title {
+        color: blue;
+    }
+
+    .flex-2-col {
+        display: block;
+    }
+
+    .tm-team-description-container {
+        max-width: none;
+    }
+
+    .flex-item:last-child {
+        text-align: center;
+    }
+}
+
+@media screen {
+    * {
+        margin: 0 auto;
+    }
+
+    #about img {
+        border-radius: 50%;
+    }
+
+    li.box.box-bg:hover {
+        background-color: #31b0d5;
+    }
+
+    li.box.box-bg h2:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+    p:first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    .tm-content-box.flex-2-col,
+    .tm-banner,
+    .boxes.gallery-container,
+    .heading.tm-content-box,
+    #ideas,
+    #contact,
+    nav {
+        box-shadow: 0 0 10px black;
+    }
+
+    .tm-content-box {
+        position: relative;
+    }
+
+    .tm-content-box:not(:empty)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 26px solid #2aabd2;
+        border-right: 130px solid transparent;
+        z-index: 1;
+    }
+    div.tm-content-box.flex-2-col::before {
+        display: none;
+    }
+
+    #tmCarousel h2 {
+        color: #dcdcdc;
+        letter-spacing: 5px;
+    }
+
+    h2+p {
+        font-style: italic;
+    }
+
+    p:not(.tm-banner-text) {
+        line-height: 32px;
+        text-indent: 16px;
+    }
+
+    ol li a:visited {
+        color: silver;
+    }
+
+    ol li a:hover {
+        text-decoration: none;
+        border-bottom: thick double #76cdd7;
+        color: #76cdd7;
+    }
+
+    a.text:after {
+        content: "New";
+        color: red;
+        font-size: 10px;
+        vertical-align: top;
+    }
+
+    .blocks li:nth-child(odd) {
+        background-color: rgb(242, 242, 242);
+    }
+
+    nav.tm-main-nav ul li {
+        border-bottom: dotted silver;
+    }
+
+    nav.tm-main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    input[type="text"] {
+        color: red;
+    }
+
+    .mandatory-field::after {
+        content: "*";
+        color: red;
+        font-weight: bold;
+    }
+
+    button[type="submit"] {
+        color: red;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #76cdd7;
+    }
+}
