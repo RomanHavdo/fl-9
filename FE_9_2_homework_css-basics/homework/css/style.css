@@ -1,8 +1,4 @@
 @media print {
-    @page {
-        margin-top: 1.5cm;
-
-    }
     .tm-main-content {
         margin-left: 0;
         padding-left: 0;
@@ -26,7 +22,7 @@
         padding: 0 0 0 1.25em;
     }
 
-    h2.tm-section-title {
+    .tm-section-title {
         color: blue;
     }
 
@@ -44,10 +40,6 @@
 }
 
 @media screen {
-    * {
-        margin: 0 auto;
-    }
-
     #about img {
         border-radius: 50%;
     }
@@ -118,7 +110,7 @@
         color: #76cdd7;
     }
 
-    a.text:after {
+    .text:after {
         content: "New";
         color: red;
         font-size: 10px;
