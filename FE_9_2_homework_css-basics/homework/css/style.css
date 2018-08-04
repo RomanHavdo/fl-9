@@ -75,11 +75,10 @@
     nav {
         box-shadow: 0 0 10px black;
     }
-
+    
     .tm-content-box {
         position: relative;
     }
-
     .tm-content-box:not(:empty)::before {
         content: "";
         position: absolute;
@@ -91,7 +90,7 @@
         border-right: 130px solid transparent;
         z-index: 1;
     }
-    div.tm-content-box.flex-2-col::before {
+    .pad.flex-item.tm-team-description-container + div.tm-content-box.flex-2-col{
         display: none;
     }
 
