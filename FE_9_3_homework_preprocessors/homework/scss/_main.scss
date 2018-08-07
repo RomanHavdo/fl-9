@@ -1,0 +1,140 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: $fontFamily;
+  background: $colorBackground;
+}
+
+.toolbar input, #submit-contact-form {
+  display: flex;
+  margin-right: 0px;
+}
+
+.toolbar input {
+  border: 1px solid $mainColor;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  background-color: inherit;
+  &::placeholder {
+    color: $mainColor;
+  }
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  img {
+    width: 350px;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    flex: 1 100%;
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    a {
+      text-decoration: none;
+      color: $mainColor;
+    }
+  }
+}
+
+.post-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  article {
+    flex: 0 47%;
+    margin-bottom: 25px;
+    padding: 5px;
+    background-color: $postBackground;
+    .post-description {
+      color: $postDescription;
+      font-size: 13px;
+      border-bottom: 1px solid $lineColor;
+      margin-bottom: 10px;
+      padding-top: 0;
+    }
+    img {
+      width: 100%;
+    }
+    div {
+      padding: 8px;
+      h3 {
+        color: $postHeader;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+article div p, section div p {
+  color: $lineColor;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+h1, h4 {
+  color: $mainColor;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+section img {
+  width: 960px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea, form input {
+  margin-top: 10px;
+}
+
+#visitor-name, #visitor-email, #subject {
+  width: 99%;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-color: $colorBorder;
+  border-style: solid;
+  background-color: inherit;
+}
+
+textarea {
+  width: 99%;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-color: $colorBorder;
+  border-style: solid;
+  padding-bottom: 40px;
+  background-color: inherit;
+}
+
+#submit-contact-form {
+  border-radius: 0;
+  background: 0;
+  border: 1px solid $mainColor;
+  color: white;
+  background-color: $mainColor;
+  font-size: 1em;
+  padding: 10px 60px;
+}
+
+footer {
+  font-size: 12px;
+  color: $postDescription;
+}
