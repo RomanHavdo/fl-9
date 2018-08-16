@@ -1,6 +1,6 @@
 const amountOfMoney = Number(prompt('Amount of money'));
 const discount = Number(prompt('Discount'));
-const savedMoney = Number(amountOfMoney * discount / 100).toFixed(2);
+const savedMoney = Number(amountOfMoney * discount / 100);
 const priceWithDiscount = amountOfMoney - savedMoney;
 
 let isValid = function(number) {
