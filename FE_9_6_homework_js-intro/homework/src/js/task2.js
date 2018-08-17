@@ -1,6 +1,6 @@
-const a = Number(prompt('a length='));
-const b = Number(prompt('b length='));
-const angle = Number(prompt('angle='));
+const a = Number(prompt('a length=','0'));
+const b = Number(prompt('b length=','0'));
+const angle = Number(prompt('angle=','0'));
 const radianToDeg = 180;
 
 let isValid = function(number) {
