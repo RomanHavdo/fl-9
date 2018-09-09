@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+
+  <main>
+    <div id="root">
+    <div id="container" class="toggle-container">
+      
+      <div id="main" class="main  toggle">
+        <h1>Simple TODO application</h1>
+        <a data-href="#add" href="#/add" id="addButton" onClick="addNewAction()">Add new task</a>
+      </div>
+
+      <div class="toggle add">
+        <h2>Add task</h2>
+        <input id="inputBtn" onkeyup="btnDisabled()" type="text" name="name-task" />
+        <div class="add-buttons">
+          <a data-href="#main" >Cancel</a>
+          <a data-href="#main" id="saveChanges" onClick="addAction()">Save changes</a>
+        </div>
+      </div>
+
+      <div id="modify" class="toggle modify">
+        <h2>Modify task</h2>
+        <input id="inputBtnModify" onkeyup="btnDisabledModify()"  type="text" name="name-task-modify" />
+        <div class="add-buttons">
+          <a data-href="#main" >Cancel</a>
+          <a data-href="#main" id="saveChanges2" onClick="saveChangesModify()">Save changes</a>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </main>
+
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
