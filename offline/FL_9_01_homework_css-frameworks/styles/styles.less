@@ -1,0 +1,119 @@
+﻿@import "variables";
+.navbar {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.btn-primary {
+	&:not(:disabled) {
+		&:not(.disabled).active {
+			color: @white;
+			background-color: #0062cc;
+			border-color: #005cbf;
+		}
+		&:not(.disabled) {
+			&:active {
+				color: @white;
+				background-color: #0062cc;
+				border-color: #005cbf;
+			}
+		}
+	}
+}
+.show {
+	>.btn-primary.dropdown-toggle {
+		color: @white;
+		background-color: #0062cc;
+		border-color: #005cbf;
+	}
+}
+.navbar-toggler {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.navbar-nav {
+	.nav-link {
+		padding-left: 1rem;
+	}
+}
+.nav-link {
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
+}
+h3 {
+	color: @blue;
+	margin-top: 10px;
+	&+hr {
+		border-color: @blue;
+	}
+}
+h2 {
+	color: @blue;
+	margin-top: 10px;
+	&+hr {
+		border-color: @blue;
+	}
+}
+
+figure {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	img {
+		width: inherit;
+	}
+}
+main {
+	img {
+		width: inherit;
+	}
+	margin-bottom: 15px;
+}
+figcaption {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: @white;
+	font-size: 1.5vw;
+}
+#figure-1 {
+	img {
+		border: 1px solid @red;
+		border-bottom-width: 0px;
+	}
+	figcaption {
+		background-color: @red;
+	}
+}
+#figure-2 {
+	img {
+		border: 1px solid @blue;
+		border-bottom-width: 0px;
+	}
+	figcaption {
+		background-color: @blue;
+	}
+}
+#figure-3 {
+	img {
+		border: 1px solid @orange;
+		border-bottom-width: 0px;
+	}
+	figcaption {
+		background-color: @orange;
+	}
+}
+#figure-4 {
+	img {
+		border: 1px solid @green;
+		border-bottom-width: 0px;
+	}
+	figcaption {
+		background-color: @green;
+	}
+}
+footer {
+	background-color: @grey;
+	color: @white;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}

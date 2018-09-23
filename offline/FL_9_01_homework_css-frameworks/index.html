@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EPAM_FL9. Offline. Lesson 1. CSS Frameworks</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less">
+
+    <script src="js/less.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link btn-primary  active " href="#">Classes <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">About us</a>
+                <a class="nav-item nav-link" href="#">Contacts</a>
+            </div>
+        </div>
+
+    </nav>
+    <header class="container">
+        <h2>Yoga Pilates</h2>
+        <hr>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12 col-xl-6">
+                <img src="img/yoga.jpg" alt="yoga">
+            </div>
+            <div class="col-md-12 col-xl-6">
+                <section>
+                    <h3>Class description</h3>
+                    <br>
+                    <p>This workout uses a series of exercise routines designed to increase your core strength &
+                        improve
+                        your
+                        posture, energy, & flexibility. Pilates work is powered by breath, flow, & centering. By
+                        focusing
+                        on
+                        the mind-body connection & using more efficient form, this workout helps develop a stronger,
+                        leaner,
+                        healthier body. Appropriate for all fitness levels.</p>
+                    <ul>
+                        <li>One Personal Trainer</li>
+                        <li>Big gym space for training</li>
+                        <li>Free tools & props</li>
+                        <li>Free locker</li>
+                        <li>Free before / after shower</li>
+                    </ul>
+                    <br>
+                </section>
+            </div>
+        </div>
+
+        <section>
+            <h3>Related classes</h3>
+            <hr>
+            <div class="row">
+
+                <figure id="figure-1" class="col-6 col-md-6 col-lg-3">
+                    <img src="img/cardio-kickbox.jpg" alt="kickboxing">
+                    <figcaption>Cardio kickboxing</figcaption>
+                </figure>
+
+                <figure id="figure-2" class="col-6 col-md-6 col-lg-3">
+                    <img src="img/fitness.jpg" alt="fitness">
+                    <figcaption>Fitness xpress</figcaption>
+                </figure>
+
+                <figure id="figure-3" class="col-6 col-md-6 col-lg-3">
+                    <img src="img/zumba.jpg" alt="zumba">
+                    <figcaption>Zumba</figcaption>
+                </figure>
+
+                <figure id="figure-4" class="col-6 col-md-6 col-lg-3">
+                    <img src="img/bootcamp.jpg" alt="bootcamp">
+                    <figcaption>Bootcamp</figcaption>
+                </figure>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy;Epam Front-end lab, 2018</p>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
