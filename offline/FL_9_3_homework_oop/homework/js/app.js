@@ -5,27 +5,25 @@ function isValidPrice(price) {
     return typeof price === 'number' && price >= 0
         && !Number.isNaN(price) && Number.isFinite(price);
 }
-class Product {
-    constructor({ name, description, price }) {
-        if (isValidString(name)) {
-            this.name = name;
-        } else {
-            console.log('Wrong product name');
-        }
-        this.description = description;
-        if (isValidPrice(price)) {
-            this.price = price;
-        } else {
-            console.log('Wrong product price');
-        }
-        this._logs = [];
-        this.cartName = '';
+function Product({ name, description, price }) {
+    if (isValidString(name)) {
+        this.name = name;
+    } else {
+        console.log('Wrong product name');
     }
+    this.description = description;
+    if (isValidPrice(price)) {
+        this.price = price;
+    } else {
+        console.log('Wrong product price');
+    }
+    this._logs = [];
+    this.cartName = '';
 
-    getPrice() {
+    this.getPrice = function () {
         return this.price;
     }
-    setPrice(newPrice) {
+    this.setPrice = function (newPrice) {
         if (isValidPrice(newPrice) && newPrice > this.price) {
             this._logs.push(`change price from ${this.price} to ${newPrice} on ${new Date()}.`);
             this.price = newPrice;
@@ -35,40 +33,40 @@ class Product {
         return this;
     }
 
-    add(cart) {
+    this.add = function (cart) {
         this.cartName = cart.name;
         this._logs.push(`${this.name}- is added to ${this.cartName} on ${new Date()}.`);
         return this;
     }
 
-    removeProduct() {
+    this.removeProduct = function () {
         this._logs.push(`${this.name}- is removed from ${this.cartName} on ${new Date()}.`);
         this.cartName = 'none';
         return this;
     }
-    getHistory() {
+    this.getHistory = function () {
         return this._logs;
     }
 
 }
-class ShoppingCart {
-    constructor({ name, owner, maxSize }) {
-        if (isValidString(name)) {
-            this.name = name;
-        } else {
-            console.log('Wrong cart name');
-        }
-        if (isValidString(owner)) {
-            this.owner = owner;
-        } else {
-            console.log('Wrong owner name');
-        }
-        this.maxSize = maxSize;
-        this.listOfTheCard = [];
-        this._logs = [];
-        this.isCreated = false;
+
+function ShoppingCart({ name, owner, maxSize }) {
+    if (isValidString(name)) {
+        this.name = name;
+    } else {
+        console.log('Wrong cart name');
     }
-    addNewProduct(item) {
+    if (isValidString(owner)) {
+        this.owner = owner;
+    } else {
+        console.log('Wrong owner name');
+    }
+    this.maxSize = maxSize;
+    this.listOfTheCard = [];
+    this._logs = [];
+    this.isCreated = false;
+
+    this.addNewProduct = function (item) {
         if (!this.isCreated) {
             this._logs.push(`${this.name} was created on ${new Date()}.`);
             this.isCreated = true;
@@ -104,7 +102,7 @@ class ShoppingCart {
         }
         return this;
     }
-    removeProduct(index) {
+    this.removeProduct = function (index) {
         if (index > -1) {
             this._logs.push(`${this.listOfTheCard[index].name}- was removed from ${this.name} on ${new Date()}.`);
             this.listOfTheCard.splice(index, 1);
@@ -113,14 +111,14 @@ class ShoppingCart {
         }
     }
 
-    getAvaragePrice() {
+    this.getAvaragePrice = function () {
         let sum = 0;
         for (let i = 0; i < this.listOfTheCard.length; i++) {
             sum += this.listOfTheCard[i].price;
         }
         return sum / this.listOfTheCard.length;
     }
-    getProducts() {
+    this.getProducts = function () {
         let products = [];
         for (let i = 0; i < this.listOfTheCard.length; i++) {
             products.push(this.listOfTheCard[i].name);
@@ -128,7 +126,7 @@ class ShoppingCart {
         return products;
     }
 
-    getFormattedListOfProducts() {
+    this.getFormattedListOfProducts = function () {
         let formatedProducts = [];
         for (let i = 0; i < this.listOfTheCard.length; i++) {
             formatedProducts.push(`${this.listOfTheCard[i].name}- is on ${this.name} from ${this.listOfTheCard[i].date}
@@ -138,14 +136,14 @@ class ShoppingCart {
         return formatedProducts;
 
     }
-    getTotalPrice() {
+    this.getTotalPrice = function () {
         let sum = 0;
         for (let i = 0; i < this.listOfTheCard.length; i++) {
             sum += this.listOfTheCard[i].price;
         }
         return sum;
     }
-    getHistory() {
+    this.getHistory = function () {
         return this._logs;
     }
 
