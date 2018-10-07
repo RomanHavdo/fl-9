@@ -1,10 +1,10 @@
-function getFoo () {
-  return new Promise(function (resolve, reject){
+function getFoo() {
+  return new Promise(function (resolve, reject) {
     resolve('foo');
   });
 }
 
-function run (generator) {
+function run(generator) {
   var it = generator();
 
   function go(result) {
