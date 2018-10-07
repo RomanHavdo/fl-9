@@ -55,12 +55,12 @@ const loadVictimData = name => new Promise(resolve => {
             crimeDataSource(victimData.surname)
                 .then(crimeData => {
                     const name = victimData.name;
-                    const surname=victimData.surname;
+                    const surname = victimData.surname;
                     const jobTitle = victimData.jobTitle;
-                    const age=victimData.age;
-                   
-                    const title=crimeData.title;
-                    const place=crimeData.place;
+                    const age = victimData.age;
+
+                    const title = crimeData.title;
+                    const place = crimeData.place;
                     resolve(`${name} ${surname}(${jobTitle}, ${age}) suffered from ${title} in ${place}.`);
                 })
         })
