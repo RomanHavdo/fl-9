@@ -1,4 +1,4 @@
 var inputs = process.argv.slice(2);
 var result = inputs.map(x => x[0].toUpperCase())
-    .reduce((result,x) => result+x);
+    .reduce((result, x) => result + x);
 console.log(result);
