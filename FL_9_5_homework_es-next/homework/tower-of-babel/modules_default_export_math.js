@@ -1,4 +1,3 @@
-
 const PI = 3.141592;
 
 let _sqrt = ((s, x, last) => { return x != last ? _sqrt(s, (x + s / x) / 2.0, x) : x; });
@@ -9,7 +8,7 @@ const sqrt = function (s) {
 const square = function (x) {
     return x * x;
 };
-export default{
+export default {
     PI: PI,
     sqrt: sqrt,
     square: square
