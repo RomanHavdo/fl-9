@@ -18,6 +18,14 @@ $('.item').click(function () {
     $('#myModal').css('display', 'block');
 
     id = $(this).attr('id');
+    if (parseInt(id) === 0) {
+        $('.left-arrow').css('display', 'none');
+        $('.change-btn a').css('display', 'none');
+    }
+    if (parseInt(id) === 21) {
+        $('.rigth-arrow').css('display', 'none');
+        $('.change-btn a').css('display', 'none');
+    }
 
     $('.name').text(username);
     $('.target-img').attr('src', media[id].display_url);
@@ -29,19 +37,31 @@ $('.item').click(function () {
     $('.info').text(media[id].edge_media_to_caption);
 
 
-    $('.close').click(e => $(e.target).parent().parent().css('display', 'none'))
+    $('.close').click(function (event) {
+        $( event.target ).parent().parent().css('display', 'none');
+        $('.left-arrow').css('display', 'block');
+        $('.change-btn a').css('display', 'block');
+        $('.rigth-arrow').css('display', 'block');
+    });
+
 
     $(document).keydown(function (e) {
-        if (e.keyCode === 27) {
-            $('#myModal').css('display', 'none');
-            $('.name').css('padding-bottom', '0');
-        }
-    });
+            if (e.keyCode === 27) {
+                $('#myModal').css('display', 'none');
+                $('.name').css('padding-bottom', '0');
+                $('.left-arrow').css('display', 'block');
+                $('.change-btn a').css('display', 'block');
+                $('.rigth-arrow').css('display', 'block');
+            }
+        });
 
     $(window).click(function (event) {
         if (event.target === $('#myModal')[0]) {
             $('#myModal').css('display', 'none');
             $('.name').css('padding-bottom', '0');
+            $('.left-arrow').css('display', 'block');
+            $('.change-btn a').css('display', 'block');
+            $('.rigth-arrow').css('display', 'block');
         }
     })
 
@@ -57,8 +77,10 @@ $('.item').click(function () {
             if ($(this).attr('src') === current_src) {
                 let current_index = $(this).parent().attr('id');
                 if (btn_click === 'prev') {
+                    $('.rigth-arrow').css('display', 'block');
+                    $('.change-btn a').css('display', 'block');
                     let new_index = parseInt(current_index) - 1;
-                    if (new_index > 0 && new_index < 21) {
+                    if (new_index > -1 && new_index < 22) {
                         $('.info').text(media[new_index].edge_media_to_caption);
                         if (media[new_index].location === '') {
                             $('.name').css('padding-bottom', '10px');
@@ -68,8 +90,10 @@ $('.item').click(function () {
                         $('.count-like').text(media[new_index].edge_liked_by.count);
                     }
                 } else if (btn_click === 'Next') {
+                    $('.left-arrow').css('display', 'block');
+                    $('.change-btn a').css('display', 'block');
                     let new_index = parseInt(current_index) + 1;
-                    if (new_index > 0 && new_index < 21) {
+                    if (new_index > -1 && new_index < 22) {
                         $('.info').text(media[new_index].edge_media_to_caption);
                         if (media[new_index].location === '') {
                             $('.name').css('padding-bottom', '10px');
