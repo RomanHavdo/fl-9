@@ -1,0 +1,115 @@
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #c7c0c0;
+}
+h1{
+    text-align: center;
+}
+
+.mainInpitDiv{
+    text-align: center;
+}
+.mainInput{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.post{
+    margin: 10px 10px;
+    background-color: white;
+    padding: 20px 10px;
+    border: 1px solid gray;
+    width: 80%;
+    margin: 10px auto;
+}
+img{
+    height:60px; 
+    width:60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+h5{
+    margin-bottom: 8px;
+}
+h3{
+    margin: 0;
+}
+.newPost{
+    margin-left: 9%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: #03A9F4;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.like-btn{
+    border-radius: 50%;
+    border: none;
+}
+
+.like-btn-red{
+    border-radius: 50%;
+    border: none;
+    color: red;
+}
+
+form{
+    width: 82%;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+form h5{
+    text-align: initial;
+}
+
+.newTitle{
+    width: 96%;
+    margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+
+.newMessage{
+    width: 96%;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+
+.btnSave,
+.btnEdit{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: #03A9F4;
+    border: 1px solid;
+    margin-left: 13px;
+    margin-bottom: 10px;
+}
+
+.btnCancel{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: gray;
+    border: 1px solid;
+}
+.btn-none{
+    display: none;
+}

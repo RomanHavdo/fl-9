@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FL_9_14_AngularJS</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="./app/app.constants.js"></script>
+    <script src="./app/app.module.js"></script>
+    <script src="./app/app.controller.js"></script>
+</head>
+
+<body>
+    <div ng-app="myPosts" ng-controller="postsControler">
+        <h1>POSTS WALL</h1>
+        <div class="mainInpitDiv">
+            <input class="mainInput" type="text" placeholder="Search by title..." ng-model="searchText.title">
+        </div>
+        <div ng-repeat="post in posts | filter:searchText">
+            <div class="post">
+                <img ng-src='{{post.img}}'>
+                <h5>{{post.User}}</h5>
+                <br>
+
+                <div>
+                    <h3 ng-if="!editMode">{{post.title}}</h3>
+                    <span ng-if="editMode">
+                        <input class="newTitle" ng-model="post.title">
+                        <span>
+                </div>
+
+                <div>
+                    <p ng-if="!editMode">{{post.post}}</p>
+                    <span ng-if="editMode">
+                        <input class="newMessage" ng-model="post.post">
+                        <span>
+                </div>
+                <button ng-class="{'like-btn-red': clicked}" class="like-btn" ng-click="like(post); clicked = !clicked">&#x2661</button>
+                <span>{{post.likes}}</span>
+                <button class="btnSave" ng-show="editMode" ng-click="update(post,post.title,post.post); editMode = false;clickedBtn = !clickedBtn">Save</button>
+                <button class="btnCancel" ng-show="editMode" ng-click="editMode = false;clickedBtn = !clickedBtn">Cancel</button>
+
+                <button ng-class="{'btn-none': clickedBtn}" class="btnEdit" ng-show="{{post.edit}}" ng-click="editMode = true; clickedBtn = !clickedBtn">Edit</button>
+            </div>
+        </div>
+
+        <form ng-show="showForm">
+            <img ng-src='{{posts[0].img}}'>
+            <h5 class="form-h5">Roman Havdo</h5>
+            <br>
+            <input class="newTitle" type="text" ng-model="newTitle" placeholder="Title" >
+            <br>
+            <input class="newMessage" type="text" ng-model="newMessage" placeholder="Message">
+            <br>
+            <input class="btnSave" ng-click="showForm = ! showForm ;save(newTitle,newMessage);addPost = !addPost" type="button"
+                value="Save" ng-required="newTitle;newMessage">
+            <input class="btnCancel" ng-click="showForm = ! showForm;addPost = !addPost" type="reset" value="Cancel">
+        </form>
+
+        <button class="newPost" ng-show="!addPost" ng-click="showForm = ! showForm;addPost = !addPost">Add new post</button>
+
+    </div>
+
+</body>
+
+</html>
