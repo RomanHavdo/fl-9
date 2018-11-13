@@ -1,0 +1,17 @@
+<div>
+    <input [(ngModel)]="newTopic" id="topic" type="text"  placeholder="Topic" />
+    <label for="topic">Topic</label>
+</div>
+
+<div>
+    <input [(ngModel)]="newDate" id="date" type="text"  placeholder="Date" />
+    <label for="date">Date</label>
+</div>
+
+<div>
+    <input [(ngModel)]="newLecture" id="lecture" type="text"   placeholder="Lecture" />
+    <label for="lecture">Lecture</label>
+</div>
+
+<button class="addBtn" (click)="addItem()">Add to the list</button>
+<button class="closeBtn" (click)="closeModaler()">Close modal</button>

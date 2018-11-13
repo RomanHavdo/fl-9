@@ -1,0 +1,5 @@
+<div class="divMainBtn">
+    <button (click)="openModal()">Add new lesson</button>
+</div>
+<app-lesson [items]="lists"></app-lesson>
+<app-modal (data)="data($event)" class="modal" *ngIf="showModal" (closeModal)="closeModal($event)"></app-modal>

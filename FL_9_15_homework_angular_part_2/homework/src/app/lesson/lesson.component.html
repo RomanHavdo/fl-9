@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>#</th>
+        <th>Topic</th>
+        <th>Date</th>
+        <th>Lecture</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of items;let i=index">
+        <td>{{i+1}}</td>
+        <td *ngIf="!editMode">{{item.topic}}</td>
+        <td *ngIf="editMode"><input [(ngModel)]="item.topic"></td>
+        <td *ngIf="!editMode">{{item.date}}</td>
+        <td *ngIf="editMode"><input [(ngModel)]="item.date"></td>
+        <td *ngIf="!editMode">{{item.lecture}}</td>
+        <td *ngIf="editMode"><input [(ngModel)]="item.lecture"></td>
+        <td><Button class="btnItem" (click)="editMode=true" *ngIf="!editMode">Edit</Button><button class="btnItem" *ngIf="editMode" (click)="editMode=false;update(item,item.topic,item.date,item.lecture)">Save</button><button class="btnItem" *ngIf="editMode" (click)="editMode=false">Cancel</button><Button (click)="delete(item)" class="btnItem" *ngIf="!editMode">Delete</Button></td>
+    </tr>
+</table>
